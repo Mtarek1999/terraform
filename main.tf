@@ -151,7 +151,7 @@ resource "aws_instance" "my-app-instance" {
                 sudo usermod -aG docker ec2-user
                 docker run -p 8080:80 nginx
               EOF  
-  #user_data = file = ("shell-scrip.sh")
+  #user_data = file = ("shell-script.sh")
 
    tags = {
     Name : "${var.env_perfix}-server"
